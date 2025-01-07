@@ -55,6 +55,9 @@ baseRouter.use("/user", userRoutes); // For example: /facultyleavesinfo/user/pro
 
 // Mount the base router
 app.use("/facultyleavesinfo", baseRouter);
+app.get("/facultyleavesinfo", (req, res) => {
+  res.redirect("/facultyleavesinfo/auth/login"); // Redirect to login page
+});
 app.get("/facultyleavesinfo/login", (req, res) => {
   res.redirect("/facultyleavesinfo/auth/login"); // Redirect to login page
 });
